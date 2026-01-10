@@ -1,1 +1,28 @@
+#include <iostream>
+using namespace std;
+
+template <class T>
+void CopyArray(T *src, T *dest, int iSize)
+{
+    for(int iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        dest[iCnt] = src[iCnt];
+    }
+}
+
+int main()
+{
+    int Arr1[] = {10, 20, 30, 40, 50};
+    int Arr2[5];
+
+    CopyArray(Arr1, Arr2, 5);
+
+    cout << "Copied array elements are: ";
+    for(int i = 0; i < 5; i++)
+    {
+        cout << Arr2[i] << " ";
+    }
+
+    return 0;
+}
 
